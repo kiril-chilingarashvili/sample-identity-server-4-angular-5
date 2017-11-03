@@ -1,4 +1,8 @@
-# SampleIdsrv4Angular5
+# Sample showcasing Identity Server 4 with .NET Core endpoint working with Angular 5 on the front end
+
+# Backend
+
+# Frontend
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.5.0.
 
