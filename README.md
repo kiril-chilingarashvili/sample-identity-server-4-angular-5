@@ -1,6 +1,20 @@
 # Sample showcasing Identity Server 4 with .NET Core endpoint working with Angular 5 on the front end
 
+# TL;DR
+
+On windows - run `run.cmd` to start both backends and one frontend, and to open fronend url in a browser
+
 # Backend
+
+## Identity server
+
+- Change directory to ./back/identity-server
+- Run `dotnet run` to start a server on port 5000
+
+## API
+
+- Change directory to ./back/api
+- Run `dotnet run` to start a API on port 5001
 
 # Frontend
 

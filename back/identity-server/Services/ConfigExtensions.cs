@@ -22,13 +22,16 @@ namespace identity_server {
     private static IEnumerable<T> Get<T>(this IConfiguration config, string section) {
       if (config == null) throw new ArgumentException(nameof(config));
       if (section == null) throw new ArgumentException(nameof(section));
-      var configSection = config.GetSection($"identityServer::{section}");
+      var configSection = config.GetSection($"identityServer:{section}");
       if (configSection.Exists()) return configSection.Get<IEnumerable<T>>();
       throw new ArgumentException($"Invalid configuration section {section}");
     }
 
     internal static IEnumerable<IdentityResource> GetIdentities(this IConfiguration config) =>
-      config.Get<IdentityResource>("identities");
+      new IdentityResource[] {
+          new IdentityResources.OpenId(),
+          new IdentityResources.Email()
+      };
     
     internal static IEnumerable<ApiResource> GetApis(this IConfiguration config) =>
       config.Get<ApiResource>("apis");
