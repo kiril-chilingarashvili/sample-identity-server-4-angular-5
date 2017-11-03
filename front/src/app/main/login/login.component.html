@@ -1,0 +1,25 @@
+<div class="row">
+  <div class="col-md-4 col-md-offset-4">
+    <h3>Login</h3>
+    <form #f="ngForm" novalidate="novalidate" (ngSubmit)="login()" [formGroup]="model">
+      <div class="form-group" [ngClass]="{ 'has-error': f.submitted &amp;&amp; model.get('password').invalid }">
+        <label>Username</label>
+        <input class="input-primary form-control" type="text" placeholder="email or username" formControlName="username" />
+        <div class="help-block" *ngIf="f.submitted &amp;&amp; model.get('username').invalid">required</div>
+      </div>
+      <div class="form-group" [ngClass]="{ 'has-error': f.submitted &amp;&amp; model.get('password').invalid }">
+        <label>Password</label>
+        <input class="input-primary form-control" type="password" placeholder="password" formControlName="password" />
+        <div class="help-block" *ngIf="f.submitted &amp;&amp; model.get('password').invalid">required</div>
+      </div>
+      <div class="help-block" *ngIf="loginFailed">
+        <div class="text-danger">login failed...</div>
+      </div>
+      <div class="form-group">
+        <button class="btn btn-primary" type="submit" [disabled]="loading">Login</button>
+        <a class="btn btn-primary" [routerLink]="['/register']">Register</a>
+        <a class="btn btn-primary" [routerLink]="['/forgot']">Forgot Password</a>
+      </div>
+    </form>
+  </div>
+</div>

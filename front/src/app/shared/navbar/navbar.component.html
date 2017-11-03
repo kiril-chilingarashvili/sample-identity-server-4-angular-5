@@ -1,0 +1,39 @@
+<div class="navbar navbar-default navbar-static-top">
+  <div class="navbar-header">
+    <ul class="nav navbar-nav">
+      <li>
+        <a [routerLink]="['/']">
+          <span>Home</span>
+        </a>
+      </li>
+      <li>
+        <a [routerLink]="['/test']">
+          <span>Test</span>
+        </a>
+      </li>
+    </ul>
+    <ul class="nav navbar-nav pull-right">
+      <li>
+        <a [routerLink]="['/register']">
+          <span>Register</span>
+        </a>
+      </li>
+      <li>
+        <a [routerLink]="['/login']">
+          <span>Login</span>
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <span>username...</span>
+          <!-- <span>{{ authService.currentUser && authService.currentUser.firstName }} {{ authService.currentUser && authService.currentUser.lastName}}</span> -->
+        </a>
+      </li>
+      <li>
+        <a [routerLink]="['/login']">
+          <span>Logout</span>
+        </a>
+      </li>
+    </ul>
+  </div>
+</div>
