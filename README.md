@@ -1,4 +1,4 @@
-# Newer version is available here: https://github.com/kirill-chilingarashvili/sample-jwt-token-angular-6-aspnetcore-2.1
+# See also: https://github.com/kirill-chilingarashvili/sample-jwt-token-angular-6-aspnetcore-2.1
 
 # Sample showcasing Identity Server 4 with .NET Core endpoint working with Angular 5 on the front end
 
